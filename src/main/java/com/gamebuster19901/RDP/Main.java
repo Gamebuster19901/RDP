@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.gameevent.InputEvent;
 import static com.gamebuster19901.RDP.Main.MODID;
 import static com.gamebuster19901.RDP.Main.VERSION;
 
-import com.gamebuster19901.RDP.proxy.key.ClientProxy;
+import com.gamebuster19901.RDP.proxy.CommonProxy;
 import com.gamebuster19901.RDP.proxy.key.KeyEventHandler;
 
 @Mod(modid = MODID, version = VERSION)
