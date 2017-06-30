@@ -20,7 +20,7 @@ public class Main {
     public static final String MODID = "rdp";
     public static final String VERSION = "0.0.0.0";
     @SidedProxy(clientSide = "com.gamebuster19901.RDP.proxy.key.ClientProxy", serverSide = "com.gamebuster19901.RDP.proxy.ServerProxy")
-    public static ClientProxy proxy;
+    public static CommonProxy proxy;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent e){
