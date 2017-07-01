@@ -28,7 +28,7 @@ public class Main {
     }
     
     @EventHandler
-    public void preInit(FMLInitializationEvent e){
+    public void init(FMLInitializationEvent e){
     	
     }
     
