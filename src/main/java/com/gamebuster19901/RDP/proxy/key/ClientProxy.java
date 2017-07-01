@@ -27,7 +27,7 @@ public class ClientProxy extends CommonProxy{
     	super.preInit(e);
     	MinecraftForge.EVENT_BUS.register(KeyEventHandler.INSTANCE);
     	for(KeyBinding kb : KEYBINDINGS){
-    		//ClientRegistry.registerKeyBinding(kb);
+    		ClientRegistry.registerKeyBinding(kb);
     	}
     }
     
