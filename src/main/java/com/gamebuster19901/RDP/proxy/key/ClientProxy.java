@@ -22,7 +22,6 @@ public class ClientProxy extends CommonProxy{
 		new AbsoluteKeyBinding("key." + MODID + "left.description", Keyboard.KEY_LEFT, "key." + MODID + ".left")
 	};
 	
-    @EventHandler
     @Override
     public void preInit(FMLPreInitializationEvent e){
     	super.preInit(e);
@@ -32,13 +31,11 @@ public class ClientProxy extends CommonProxy{
     	}
     }
     
-    @EventHandler
     @Override
     public void init(FMLInitializationEvent e){
     	super.init(e);
     }
     
-    @EventHandler
     @Override
     public void postInit(FMLPostInitializationEvent e){
     	super.postInit(e);

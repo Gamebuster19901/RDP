@@ -8,19 +8,16 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ServerProxy extends CommonProxy{
-    @EventHandler
     @Override
     public void preInit(FMLPreInitializationEvent e){
     	super.preInit(e);
     }
-    
-    @EventHandler
+
     @Override
     public void init(FMLInitializationEvent e){
     	super.init(e);
     }
-    
-    @EventHandler
+
     @Override
     public void postInit(FMLPostInitializationEvent e){
     	super.postInit(e);
