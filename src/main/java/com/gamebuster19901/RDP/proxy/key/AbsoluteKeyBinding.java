@@ -10,8 +10,8 @@ import net.minecraft.client.settings.KeyBinding;
  */
 
 public class AbsoluteKeyBinding extends KeyBinding{
-	final boolean wasPressed = false;
-	final long cyclesHeld = 0;
+	boolean wasPressed = false;
+	long cyclesHeld = 0;
 		
 	public AbsoluteKeyBinding(String description, int keyCode, String category) {
 		super(description, keyCode, category);
