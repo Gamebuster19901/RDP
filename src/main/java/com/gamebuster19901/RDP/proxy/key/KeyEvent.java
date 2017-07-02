@@ -3,10 +3,11 @@ package com.gamebuster19901.RDP.proxy.key;
 import static com.gamebuster19901.RDP.proxy.key.KeyEvent.EventType.HELD;
 import static com.gamebuster19901.RDP.proxy.key.KeyEvent.EventType.PUSHED;
 import static com.gamebuster19901.RDP.proxy.key.KeyEvent.EventType.RELEASED;
-import static com.gamebuster19901.RDP.proxy.key.KeyEvent.KeyType.DOWN;
-import static com.gamebuster19901.RDP.proxy.key.KeyEvent.KeyType.LEFT;
-import static com.gamebuster19901.RDP.proxy.key.KeyEvent.KeyType.RIGHT;
-import static com.gamebuster19901.RDP.proxy.key.KeyEvent.KeyType.UP;
+import static com.gamebuster19901.RDP.proxy.key.KeyType.DOWN;
+import static com.gamebuster19901.RDP.proxy.key.KeyType.LEFT;
+import static com.gamebuster19901.RDP.proxy.key.KeyType.RIGHT;
+import static com.gamebuster19901.RDP.proxy.key.KeyType.UP;
+
 
 public final class KeyEvent {
 	public static final KeyEvent REGISTER = new KeyEvent(RELEASED, UP);
@@ -34,7 +35,11 @@ public final class KeyEvent {
 	}
 
 	public final KeyType getKeyType() {
-		return KeyType.get(key);
+		return key;
+	}
+	
+	public final int getKeyCode(){
+		return key.keyCode;
 	}
 
 	public final long getTimeHeld() {
@@ -64,26 +69,6 @@ public final class KeyEvent {
 				return RELEASED;
 			}
 			throw new IllegalStateException();
-		}
-	}
-
-	public static enum KeyType {
-		UP, RIGHT, DOWN, LEFT;
-
-		public static KeyType get(KeyType k) {
-			if (k == UP) {
-				return UP;
-			}
-			if (k == RIGHT) {
-				return RIGHT;
-			}
-			if (k == DOWN) {
-				return DOWN;
-			}
-			if (k == LEFT) {
-				return LEFT;
-			}
-			throw new IllegalArgumentException();
 		}
 	}
 }
