@@ -22,23 +22,20 @@ public class ClientProxy extends CommonProxy{
 		new AbsoluteKeyBinding("key." + MODID + "left.description", Keyboard.KEY_LEFT, "key." + MODID + ".left")
 	};
 	
-    @EventHandler
     @Override
     public void preInit(FMLPreInitializationEvent e){
     	super.preInit(e);
     	MinecraftForge.EVENT_BUS.register(KeyEventHandler.INSTANCE);
     	for(KeyBinding kb : KEYBINDINGS){
-    		//ClientRegistry.registerKeyBinding(kb);
+    		ClientRegistry.registerKeyBinding(kb);
     	}
     }
     
-    @EventHandler
     @Override
     public void init(FMLInitializationEvent e){
     	super.init(e);
     }
     
-    @EventHandler
     @Override
     public void postInit(FMLPostInitializationEvent e){
     	super.postInit(e);

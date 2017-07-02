@@ -24,16 +24,16 @@ public class Main {
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent e){
-    	
+    	proxy.preInit(e);
     }
     
     @EventHandler
-    public void preInit(FMLInitializationEvent e){
-    	
+    public void init(FMLInitializationEvent e){
+        proxy.init(e);
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent e){
-    	
+    	proxy.postInit(e);
     }
 }
